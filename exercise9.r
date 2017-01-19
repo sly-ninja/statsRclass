@@ -100,3 +100,6 @@ SE = sqrt( varT/12 + varC/12 )
 # t-statistic
 tStat = ( mean(Y) - mean(X) ) / SE
 result = t.test(treatment, control)
+
+# p-value
+2 * (1 - pnorm(tStat))
