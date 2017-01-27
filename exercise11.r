@@ -21,3 +21,9 @@ Q = qt(.995, df=2*N-2)
 Q*sqrt( sd( dat.ns)^2/N + sd( dat.s)^2/N )
 
 qt(0.995, df=2*N-2)*sqrt( sd( dat.ns)^2/N + sd( dat.s)^2/N )
+
+
+set.seed(1)
+dat.ns = sample(bwt.nonsmoke, 5)
+dat.s = sample(bwt.smoke, 5)
+result = t.test(dat.ns, dat.s)
